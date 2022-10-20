@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>indix</title>
+  </head>
+  <style media="screen">
+  body{
+    background:url("{{url_for('static',filename =p_img)}}");
+    /* background: black; */
+    background-size: 100%;
+  }
+  .main-box{
+    /* margin-left: 60px; */
+    background: black;
+    width: 100%;
+    height:100px;
+    display:flow-root;
+  }
+
+      .n-name{
+          color:green;
+          font-size: 20px;
+          font-weight: bold;
+          font-family: Arial Black;
+          margin-top: -70px;
+          margin-left: 140px;
+        }
+        .n-gender{
+            color:green;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Arial Black;
+            margin-left: 150px;
+            margin-top: 10px;
+          }
+    .c-img{
+
+      width: 70px;
+      height: 70px;
+      background: green;
+      border-radius: 50%;
+      margin-left: 40px;
+      margin-top: 14px;
+      transition: 1s ease-in-out;
+    }
+    .c-img:hover{
+      box-shadow: 0px 0px 30px -10px white;
+    }
+  </style>
+  <body>
+    <div class="main-box">
+      <div class="c-img">
+        <img class="c-img" src="{{url_for('static',filename =p_img)}}" alt="">
+      </div>
+      <div class="n-name">
+        {{name}}
+      </div>
+      <div class="n-gender">
+        Welcome {{gender}},
+      </div>
+    </div>
+
+
+  </body>
+</html>
