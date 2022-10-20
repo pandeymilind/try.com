@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Signup</title>
+  </head>
+  <style media="screen">
+  ::placeholder {
+    color: black;
+    opacity: .5;
+  }
+  body{
+    background-image: url("{{url_for('static',filename = 'background3.jpg')}}");
+    background-repeat:  ;
+    background-size: 100%;
+  }
+    .show_case{
+      width: 300px;
+      height: 400px;
+      backdrop-filter:blur(10px) saturate(100%) contrast(45%) brightness(130%);
+      background: #5e5e5e;
+    }
+    .singup_card{
+
+    }
+    .form_cont{
+      border-radius: 10px;
+      backdrop-filter:blur(10px) saturate(100%) contrast(45%) brightness(130%);
+      margin-top:105px ;
+      margin-left:580px ;
+      width:350px;
+      height: 400px;
+    }
+    .div_name{
+      margin-bottom:10px ;
+    }
+    .div_age{
+      margin-bottom:10px ;
+      margin-left:230px ;
+      margin-top: -46px;
+    }
+    .div_gender{
+      margin-bottom:10px ;
+      margin-left:10px;
+      margin-right: ;
+    }
+    .div_phone{
+      margin-top: -51px;
+      margin-left: 120px;
+      margin-bottom:10px ;
+    }
+    .div_photo{
+      margin-bottom:10px ;
+      margin-left: 10px;
+      margin-top: 30px;
+    }
+    .div_mail{
+      margin-bottom:10px ;
+    }
+    .div_user_id{
+      margin-bottom:10px ;
+    }
+    .div_user_password{
+      margin-bottom:10px ;
+    }
+    .div_submit{
+      margin-top: -85px;
+      margin-left: 90px;
+    }
+    /* class */
+    .class_title{
+      margin-top: 90px
+    }
+    .class_name{
+      height: 30px;
+      width: 200px;
+      text-align: ;
+      margin-left: 10px;
+      margin-top:4px;
+      border: none;
+      border-bottom: 1px solid white;
+      background: none;
+      transition: 1s ease-in-out;
+      font-size: 20px;
+      padding: 4px;
+      outline: none;
+    }
+    .class_age{
+      height: 28px;
+      width: 100px;
+      border: none;
+      border-bottom: 1px solid white;
+      background: none;
+      transition: 1s ease-in-out;
+      font-size: 20px;
+      padding: 4px;
+      outline: none;
+
+    }
+    input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+    .class_gender{
+      width: 100px;
+      height: 37px;
+      border: none;
+      border-bottom: 1px solid white;
+      background: none;
+      transition: 1s ease-in-out;
+      font-size: 20px;
+      padding: 4px;
+      outline: none;
+    }
+    .class_phone{
+      width:200px;
+      height: 30px;
+      text-align: ;
+      margin-left: 10px;
+      margin-top:4px;
+      border: none;
+      border-bottom: 1px solid white;
+      background: none;
+      transition: 1s ease-in-out;
+      font-size: 20px;
+      padding: 4px;
+      outline: none;
+    }
+    .class_photo{
+      height: 30px;
+      width: 200px;
+      text-align: ;
+      margin-left: 10px;
+      margin-top:4px;
+      font-size: 20px;
+      padding: 4px;
+
+    }
+    .class_mail{
+      height: 30px;
+      width: 320px;
+      text-align: ;
+      margin-left: 10px;
+      margin-top:4px;
+      border: none;
+      border-bottom: 1px solid white;
+      background: none;
+      transition: 1s ease-in-out;
+      font-size: 20px;
+      padding: 4px;
+      outline: none;
+
+    }
+    .class_user_id{
+      height: 30px;
+      width: 320px;
+      text-align: ;
+      margin-left: 10px;
+      margin-top:4px;
+      border: none;
+      border-bottom: 1px solid white;
+      background: none;
+      transition: 1s ease-in-out;
+      font-size: 20px;
+      padding: 4px;
+      outline: none;
+    }
+    .class_user_password{
+      height: 30px;
+      width: 320px;
+      text-align: ;
+      margin-left: 10px;
+      margin-top:4px;
+      border: none;
+      border-bottom: 1px solid white;
+      background: none;
+      transition: 1s ease-in-out;
+      font-size: 20px;
+      padding: 4px;
+      outline: none;
+    }
+    .class_submit{
+      height: 69px;
+      width: 69px;
+      text-align: ;
+      margin-left: 140px;
+      margin-top:4px;
+      border-radius: 30%;
+      border: none;
+      background: none;
+      transition: 1s ease-in-out;
+      font-size: 20px;
+      padding: 4px;
+      outline: none;
+      cursor: pointer;
+    }
+    .class_submit:hover{
+      box-shadow: 0px 0px 40px -20px white;
+
+    }
+    /**/
+
+    .img_cont{
+      display:none;
+      position: absolute;
+    }
+    .button_{
+      width:150px;
+      height:90px;
+      background:none;
+      cursor:pointer;
+      border:1px solid white;
+      border-left:1px solid white;
+      transition:1s ease-in-out;
+    }
+    .button_:hover{
+      box-shadow:0px 0px 30px -10px white;
+      /* border: 3px solid white; */
+    }
+    .p_img{
+      cursor:pointer;
+      padding:9px;
+      transition:1s ease-in-out;
+    }
+    .p_img:hover{
+      box-shadow:0px 0px 15px 5px ;
+        }
+    .click{
+      margin-left:20px;
+      margin-top:5px;
+      cursor:pointer;
+      display:block;
+      font-size:20px;
+    }
+    .b_img{
+    width:150px;
+    height:90px;
+    display: none;
+    margin-left: -7px;
+    margin-top:-2px;
+    }
+    .h_cont{
+      transition:1s ease-in-out;
+    }
+    .h_cont:hover{
+    }
+    input[type=text]:focus {
+
+      border-bottom: 1px solid green;
+      box-shadow: 0px 0px 3px 0px black;
+    }
+  </style>
+  <body>
+    <div class="div_title">
+    </div>
+    <form class="" method="post">
+
+
+    <div class="form_cont">
+      <div class="div_name"><input  class="class_name"  id = "id_name"  type="text" name="Name_" value="" placeholder="Name"></div>
+
+    <div class="div_age">
+      <input  class="class_age"  id = "id_age"   type="number" name="Age_" value="" placeholder="Age">
+    </div>
+    <div class="div_gender">
+      <select class="class_gender"  id = "id_gender"  class="" name="Gender" placeholder=" Gender">
+        <option value="" >select</option>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+      </select>
+    </div>
+    <div class="div_phone">
+      <input class="class_phone" id ="id_phone"    type="text" name="ph_" placeholder="Phone Number">
+    </div>
+    <div class="div_mail">
+      <input class="class_mail" id ="id_mail" type="text" name="mail_" placeholder="Email">
+    </div>
+    <div class="div_user_id">
+      <input class="class_user_id" id ="id_user_id"  type="text" name="id_" placeholder="User id">
+    </div>
+    <div class="div_user_password">
+      <input class="class_user_password" id ="id_user_password"   type="text" name="pass_" placeholder="Password">
+    </div>
+    <div class="div_photo">
+      <button id="button_" type="button" name="" value="Click" class="button_" onclick="f()"><img class="b_img" id="b_img" src="" alt="" ><p class="click" id="click">Click to profile picture</p></button>
+      <div class="h_cont">
+
+
+      <div class="img_cont" id="img_cont" >
+        <img  class="p_img" id="image1_" src= "{{url_for('static',filename = 'p123.jpg')}}" alt="" width="150" height="100" onclick="back('{{url_for('static',filename = 'p123.jpg')}}')">
+        <img  class="p_img" id="image2_" src= "{{url_for('static',filename = 'p124.jpg')}}" alt="" width="150" height="100" onclick="back('{{url_for('static',filename = 'p124.jpg')}}')">
+        <img  class="p_img" id="image3_" src= "{{url_for('static',filename = 'p125.jpg')}}" alt="" width="150" height="100" onclick="back('{{url_for('static',filename = 'p125.jpg')}}')">
+        <img  class="p_img" id="image4_" src= "{{url_for('static',filename = 'p126.jpg')}}" alt="" width="150" height="100" onclick="back('{{url_for('static',filename = 'p126.jpg')}}')">
+
+      </div></div>
+      <script type="text/javascript">
+        function f(){
+          var x = document.getElementById("img_cont");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+        function back(image){
+          document.getElementById("click").style.display="none";
+          document.getElementById("b_img").style.display="Block";
+          document.getElementById("b_img").src=image;
+          document.getElementById("flask_image").value=image;
+          document.getElementById("button_").style.background="none";
+        }
+        function background_(){
+          document.getElementById("click").style.display="none";
+          document.getElementById('id')
+        }
+      </script>
+    <div class="div_submit">
+      <input class="class_submit" id="id_submit" type="submit" name="Submit" value="Submit">
+    </div>
+    </div>
+    <style media="screen">
+      #flask_image{
+        display: none;
+      }
+    </style>
+    <input id="flask_image" type="text" name="Image_" value="" >
+  </form>
+
+  </body>
+</html>

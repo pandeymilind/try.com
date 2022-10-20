@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="div_photo">
+      <div id="button_" type="button" name="" value="Click" class="button_" onclick="f()"><img class="b_img" id="b_img" name="Image_"src="" alt="" value=""><p class="click" id="click">Click to profile picture</p></div>
+      <div class="h_cont">
+
+
+      <div class="img_cont" id="img_cont" >
+        <img  class="p_img" id="image1_" src= "{{url_for('static',filename = 'p123.jpg')}}" alt="" width="150" height="100" onclick="back('{{url_for('static',filename = 'p123.jpg')}}')">
+        <img  class="p_img" id="image2_" src= "{{url_for('static',filename = 'p124.jpg')}}" alt="" width="150" height="100" onclick="back('{{url_for('static',filename = 'p124.jpg')}}')">
+        <img  class="p_img" id="image3_" src= "{{url_for('static',filename = 'p125.jpg')}}" alt="" width="150" height="100" onclick="back('{{url_for('static',filename = 'p125.jpg')}}')">
+        <img  class="p_img" id="image4_" src= "{{url_for('static',filename = 'p126.jpg')}}" alt="" width="150" height="100" onclick="back('{{url_for('static',filename = 'p126.jpg')}}')">
+
+      </div></div>
+      <script type="text/javascript">
+        function f(){
+          var x = document.getElementById("img_cont");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+        function back(image){
+          document.getElementById("click").style.display="none";
+          document.getElementById("b_img").style.display="Block";
+          document.getElementById("b_img").src=image;
+          document.getElementById("b_img").value=image;
+          document.getElementById("button_").style.background="none";
+        }
+        function background_(){
+          document.getElementById("click").style.display="none";
+          document.getElementById('id')
+        }
+      </script>
+  </body>
+</html>
